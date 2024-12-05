@@ -1,0 +1,13 @@
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+
+    background-color: red;
+
+    height: 100vh;
+    width: 8vw;
+
+    padding: 2vw;
+
+    gap: 5vh;
+}
