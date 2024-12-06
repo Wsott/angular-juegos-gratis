@@ -1,8 +1,21 @@
+.back-container {
+    background-color: rgba(0, 255, 255, 0);
+    padding-left: 0.5vw;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.back-container:hover {
+    background-color: rgba(0, 255, 255, 1);
+    padding-left: 0.5vw;
+}
+
 .boton-container {
-    width: 100%;
-    
+    width: calc(100% - 1vw);
+    background-color: red;
     display: flex;
     align-items: center;
     font-family: Roboto;
     gap: 0.5vw;
+    padding-left: 1vw;
 }
