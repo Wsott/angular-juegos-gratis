@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'navbar-boton',
@@ -9,4 +9,10 @@ import { Component, Input } from '@angular/core';
 })
 export class BotonNavBarComponent {
   @Input() plataforma: string = "Inicio";
+  @Input() seleccionado: boolean = false;
+  @Output() actualizar = new EventEmitter<string>();
+
+  notificar() {
+    this.actualizar.emit(this.plataforma);
+  }
 }

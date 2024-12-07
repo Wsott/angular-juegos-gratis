@@ -1,4 +1,4 @@
-<div class="back-container">
+<div (click)="notificar()" class="back-container" [ngClass]="{'activo': seleccionado}">
     <div class="boton-container">
         <svg *ngIf="plataforma === 'Steam'" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30%" height="100%" viewBox="0 0 48 48">
             <path fill="#000"
