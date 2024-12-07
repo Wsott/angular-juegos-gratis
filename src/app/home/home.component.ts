@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { GameCardComponent } from '../game-card/game-card.component';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [ GameCardComponent ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

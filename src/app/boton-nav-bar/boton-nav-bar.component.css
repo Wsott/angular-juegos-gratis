@@ -1,21 +1,26 @@
 .back-container {
     background-color: rgba(0, 255, 255, 0);
-    padding-left: 0.5vw;
+    padding: 0 0 0.3vh 0.35vw;
     transition: background-color 0.5s;
     cursor: pointer;
+    /* width: 100%; */
 }
 
 .back-container:hover {
-    background-color: rgba(0, 255, 255, 1);
-    padding-left: 0.5vw;
+    background-color: rgba(0, 0, 255, 1);
+    padding: 0 0 0.3vh 0.35vw;
 }
 
 .boton-container {
-    width: calc(100% - 1vw);
-    background-color: red;
+    /* width: 100%; */
+    background-color: lightgrey;
     display: flex;
     align-items: center;
+    gap: 0.75vw;
+    padding: 1vh 0 1vh 1vw;
+}
+
+.mensaje {
     font-family: Roboto;
-    gap: 0.5vw;
-    padding-left: 1vw;
+    font-size: larger;
 }
