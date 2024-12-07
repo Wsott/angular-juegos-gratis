@@ -1,5 +1,5 @@
 <div class="app-container">
     
-     <platform-navbar></platform-navbar>
-    <router-outlet></router-outlet>
+    <platform-navbar (actualizarLista)="actualizarListado($event)"></platform-navbar>
+    <app-home [titulo]="cabecera"></app-home>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { GameCardComponent } from '../game-card/game-card.component';
 
 @Component({
@@ -8,5 +8,5 @@ import { GameCardComponent } from '../game-card/game-card.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  @Input() titulo: string | undefined;
 }
