@@ -59,3 +59,8 @@
         width: 100%;
     }
 }
+
+.wrapper-imagen {
+    position: relative;
+    aspect-ratio: 1.8/1;
+}

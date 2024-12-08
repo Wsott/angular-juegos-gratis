@@ -1,5 +1,9 @@
 <div class="card-container">
-    <img class="card-imagen" src="{{ datos?.imagen }}" alt="">
+    <div class="wrapper-imagen">
+        <app-spinner *ngIf="cargando"></app-spinner>
+        <img class="card-imagen" src="{{ datos?.imagen }}" alt="" (load)="imagenCargada()">
+    </div>
+    
     <div class="card-data">
         <h3 class="card-title">{{ datos?.nombre }}</h3>
         <hr>
