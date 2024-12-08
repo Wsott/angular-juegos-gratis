@@ -1,16 +1,38 @@
-.navbar-container {
-    display: flex;
-    flex-direction: column;
+@media (min-width: 800px) {
+    .navbar-container {
+        display: flex;
+        flex-direction: column;
 
-    background-color: lightgrey;
+        background-color: lightgrey;
 
-    height: fit-content;
-    max-width: 15vw;
-    width: 15vw;
-    height: 100vh;
+        height: fit-content;
+        max-width: 15vw;
+        width: 15vw;
+        height: 100vh;
 
-    /* padding: 1.5vw 3vh 0 0; */
-    padding-top: 3vh;
+        /* padding: 1.5vw 3vh 0 0; */
+        padding-top: 3vh;
 
-    gap: 6vh;
+        gap: 6vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar-container {
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+        
+
+        background-color: lightgrey;
+
+        height: fit-content;
+        max-width: 100%;
+        width: 100vw;
+
+        /* padding: 1.5vw 3vh 0 0; */
+        
+
+        gap: 6vh;
+    }
 }
