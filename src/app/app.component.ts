@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
 })
 export class AppComponent {
   title = 'angular-juegos-gratis';
-  cabecera: string | undefined;
+  cabecera: string = "";
 
   actualizarListado(plataforma: string) {
     this.cabecera = plataforma;

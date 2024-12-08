@@ -14,7 +14,7 @@ export class BarraPlataformasComponent {
   cambiarPlataforma(plataforma: string) {
     this.botones.forEach(boton => {
       if (boton.plataforma != plataforma) {
-        console.log(boton);
+        //console.log(boton);
         boton.seleccionado = false;
       }
       else {
