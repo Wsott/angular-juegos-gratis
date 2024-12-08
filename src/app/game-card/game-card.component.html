@@ -1,9 +1,9 @@
 <div class="card-container">
-    <img class="card-imagen" src="https://www.gamerpower.com/offers/1/674cc2be57fd8.jpg" alt="">
+    <img class="card-imagen" src="{{ datos?.imagen }}" alt="">
     <div class="card-data">
-        <h3 class="card-title">Bus Simulator 21 Next Stop (Epic Games) Giveaway</h3>
+        <h3 class="card-title">{{ datos?.nombre }}</h3>
         <hr>
-        <span>Juego disponible hasta el 12/12/2024</span>
+        <span>{{ datos?.tipo }} disponible hasta <br>el {{ datos?.fecha_limite != "N/A"? (datos?.fecha_limite | date: "dd/MM/yyyy") : "fin de los tiempos"}}</span>
         <!-- <br>
         <span >Disponible hasta 12/12/2024</span> -->
     </div>

@@ -1,6 +1,10 @@
 <div class="display-container">
     <h2 class="titulo">{{ titulo }}</h2>
-    <div class="display-row">
+    <div *ngFor="let sublista of listaDeJuegos" class="display-row">
+        <app-game-card *ngFor="let actual of sublista" [datos]="actual"></app-game-card>
+    </div>
+
+    <!-- <div class="display-row">
         <app-game-card></app-game-card>
         <app-game-card></app-game-card>
         <app-game-card></app-game-card>
@@ -9,5 +13,5 @@
     <div class="display-row">
         <app-game-card></app-game-card>
         <app-game-card></app-game-card>
-    </div>
+    </div> -->
 </div>

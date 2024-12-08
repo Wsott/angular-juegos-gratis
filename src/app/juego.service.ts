@@ -32,7 +32,7 @@ export class JuegoService {
         nombre: actual.title,
         imagen: actual.thumbnail,
         descripcion: actual.description,
-        tipo: actual.type,
+        tipo: (actual.type == "Game"? "Juego" : "DLC"),
         fecha_limite: actual.end_date,
         link: actual.open_giveaway
       }));
