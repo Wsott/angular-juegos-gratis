@@ -1,7 +1,7 @@
 <div class="card-container">
     <div class="wrapper-imagen">
         <app-spinner *ngIf="cargando"></app-spinner>
-        <img class="card-imagen" src="{{ datos?.imagen }}" alt="" (load)="imagenCargada()">
+        <img class="card-imagen" [ngClass]="{'blur': cargando}" src="{{ datos?.imagen }}" alt="" (load)="imagenCargada()">
     </div>
     
     <div class="card-data">
