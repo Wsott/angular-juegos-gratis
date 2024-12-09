@@ -1,14 +1,19 @@
-<div class="card-container">
-    <div class="wrapper-imagen">
-        <app-spinner *ngIf="cargando"></app-spinner>
-        <img class="card-imagen" [ngClass]="{'blur': cargando}" src="{{ datos?.imagen }}" alt="" (load)="imagenCargada()">
+<a class="card-link" href="{{ datos?.link }}" target="_blank">
+    <div class="card-container">
+        <div class="wrapper-imagen">
+            <app-spinner *ngIf="cargando"></app-spinner>
+            <img class="card-imagen" [ngClass]="{'blur': cargando}" src="{{ datos?.imagen }}" alt=""
+                (load)="imagenCargada()">
+        </div>
+
+        <div class="card-data">
+            <h3 class="card-title">{{ datos?.nombre }}</h3>
+            <!-- <hr> -->
+            <div class="divisor"></div>
+            <span>{{ datos?.tipo }} disponible hasta <br>el {{ datos?.fecha_limite != "N/A"? (datos?.fecha_limite | date:
+                "dd/MM/yyyy") : "fin de los tiempos"}}</span>
+            <!-- <br>
+            <span >Disponible hasta 12/12/2024</span> -->
+        </div>
     </div>
-    
-    <div class="card-data">
-        <h3 class="card-title">{{ datos?.nombre }}</h3>
-        <hr>
-        <span>{{ datos?.tipo }} disponible hasta <br>el {{ datos?.fecha_limite != "N/A"? (datos?.fecha_limite | date: "dd/MM/yyyy") : "fin de los tiempos"}}</span>
-        <!-- <br>
-        <span >Disponible hasta 12/12/2024</span> -->
-    </div>
-</div>
+</a>
