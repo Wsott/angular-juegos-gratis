@@ -1,5 +1,13 @@
-<div class="display-container">
+<app-landing *ngIf="landing" />
+<div *ngIf="!landing" class="display-container">
     <h2 class="titulo">{{ titulo }}</h2>
+    <div class="vacio" *ngIf="listaDeJuegos.length == 0 && !cargando">
+        <h2>No hay nada que mostrar</h2>
+        <h3>¯\_(ツ)_/¯</h3>
+    </div>
+    <div class="cargando" *ngIf="cargando">
+        <app-spinner/>
+    </div>
     <div *ngFor="let sublista of listaDeJuegos" class="display-row">
         <app-game-card *ngFor="let actual of sublista" [datos]="actual"></app-game-card>
     </div>
