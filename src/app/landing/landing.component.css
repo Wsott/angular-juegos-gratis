@@ -2,12 +2,9 @@
     .landing-container {
         display: flex;
         gap: 1vw;
-        /* justify-content: center; */
         padding: 1vw 3vw;
-        /* width: 100vw; */
-        /* width: 100%; */
         flex-wrap: wrap;
-        background-color: teal;
+        margin-left: 15vw;
     }
     
     .landing-titulo {
@@ -24,12 +21,8 @@
     .landing-container {
         display: flex;
         gap: 1vw;
-        /* justify-content: center; */
         padding: 1vw 3vw;
-        /* width: 100vw; */
-        /* width: 100%; */
         flex-wrap: wrap;
-        background-color: teal;
     }
     
     .landing-titulo {
