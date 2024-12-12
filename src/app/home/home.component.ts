@@ -20,6 +20,7 @@ export class HomeComponent {
   listaOriginal: Juego[] = [];
   cargando: boolean = false;
   landing: boolean = true;
+  ocultarDLCs: boolean = false;
 
   @Input() set titulo(valor: string) {
     if (valor != ""){
@@ -43,6 +44,44 @@ export class HomeComponent {
     }
   }
 
+  async prepararListas() {
+    this.cargando = true;
+    let listaAuxiliar;
+
+    if (this.ocultarDLCs) {
+      listaAuxiliar = this.listaOriginal.filter(actual => actual.tipo == 'Juego');
+    }
+    else {
+      listaAuxiliar = this.listaOriginal;
+    }
+
+    const sublistas = [];
+
+    if (this.mobile) {
+      for (let x = 0; x < listaAuxiliar.length; x += 1) {
+        sublistas.push(listaAuxiliar.slice(x, x + 1));
+      }
+      this.listaDeJuegos = sublistas;
+      this.cargando = false;
+      return
+    }
+
+    for (let x = 0; x < listaAuxiliar.length; x += 4) {
+      sublistas.push(listaAuxiliar.slice(x, x + 4));
+    }
+
+    this.listaDeJuegos = sublistas;
+
+    this.cargando = false;
+  }
+
+  filtrarDLC(evento: Event): void {
+    const control = evento.target as HTMLInputElement;
+    this.ocultarDLCs = control.checked;
+    this.prepararListas();
+    
+  }
+
   async actualizarLista() {
     this.landing = false;
     //alert(this.landing)
@@ -63,23 +102,25 @@ export class HomeComponent {
 
       this.listaOriginal = datos;
 
-      const sublistas = [];
+      await this.prepararListas();
 
-      if (this.mobile) {
-        for (let x = 0; x < datos.length; x += 1) {
-          sublistas.push(datos.slice(x, x + 1));
-        }
+      // const sublistas = [];
 
-        this.listaDeJuegos = sublistas;
-        return
-      }
+      // if (this.mobile) {
+      //   for (let x = 0; x < datos.length; x += 1) {
+      //     sublistas.push(datos.slice(x, x + 1));
+      //   }
 
-      for (let x = 0; x < datos.length; x += 4) {
-        sublistas.push(datos.slice(x, x + 4));
-      }
+      //   this.listaDeJuegos = sublistas;
+      //   return
+      // }
 
-      this.listaDeJuegos = sublistas;
-      console.log(this.listaDeJuegos);
+      // for (let x = 0; x < datos.length; x += 4) {
+      //   sublistas.push(datos.slice(x, x + 4));
+      // }
+
+      // this.listaDeJuegos = sublistas;
+      // console.log(this.listaDeJuegos);
     }
   }
 }
