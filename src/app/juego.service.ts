@@ -26,6 +26,7 @@ export class JuegoService {
 
     try {
       const datos = await axios.request<Juego[]>(opciones);
+      
 
       const juegos: Juego[] = datos.data.map((actual: any) => ({
         id: actual.id,
@@ -38,6 +39,8 @@ export class JuegoService {
       }));
 
       //console.log(juegos);
+      
+      console.log(juegos);
 
       return juegos;
     } catch(error) {

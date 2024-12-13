@@ -23,7 +23,6 @@
     }
 
     .mensaje {
-        font-family: Roboto;
         font-size: larger;
     }
 }
@@ -61,7 +60,6 @@
     }
 
     .mensaje {
-        font-family: Roboto;
         font-size: larger;
         width: 100%;
     }

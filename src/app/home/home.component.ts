@@ -103,24 +103,6 @@ export class HomeComponent {
       this.listaOriginal = datos;
 
       await this.prepararListas();
-
-      // const sublistas = [];
-
-      // if (this.mobile) {
-      //   for (let x = 0; x < datos.length; x += 1) {
-      //     sublistas.push(datos.slice(x, x + 1));
-      //   }
-
-      //   this.listaDeJuegos = sublistas;
-      //   return
-      // }
-
-      // for (let x = 0; x < datos.length; x += 4) {
-      //   sublistas.push(datos.slice(x, x + 4));
-      // }
-
-      // this.listaDeJuegos = sublistas;
-      // console.log(this.listaDeJuegos);
     }
   }
 }
